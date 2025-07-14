@@ -16,6 +16,7 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(cors({
+  // Set this to your deployed Vercel frontend URL for production
   origin: process.env.CLIENT_URL || 'http://localhost:5173',
   credentials: true
 }));
